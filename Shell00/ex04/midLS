@@ -1,0 +1,5 @@
+ls -ptm
+# ls: lista o conteúdo do diretório
+# -p: adiciona barra (/) ao final do nome de diretórios.
+# -t: ordena por data de modificação, os mais recentes primeiro.
+# -m: separa por vírgulas.

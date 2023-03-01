@@ -21,20 +21,23 @@ int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
-	int	rev;
+	int	l;
 
 	i = 1;
-	rev = argc - 1;
+	// 'l' receives the last position of argv
+	l = argc - 1;
 	while (i < argc)
 	{
 		j = 0;
-		while (argv[rev][j] != '\0')
+
+		// This loop prints the last argv parameter to the first
+		while (argv[l][j])
 		{
-			ft_putchar(argv[rev][j]);
+			ft_putchar(argv[l][j]);
 			j++;
 		}
 		ft_putchar('\n');
 		i++;
-		rev--;
+		l--;
 	}	
 }

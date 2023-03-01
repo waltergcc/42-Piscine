@@ -22,6 +22,9 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
+
+	// The argv parameter in index 0 is always the name of the program
+	// This function prints the name of the program until the end
 	while (argv[0][i] != '\0' && argc)
 	{
 		ft_putchar(argv[0][i]);

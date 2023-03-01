@@ -18,9 +18,7 @@ int	ft_strcmp(char *s1, char *s2)
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] != '\0')
-	{
 		i++;
-	}
 	return (s1[i] - s2[i]);
 }
 
@@ -37,7 +35,7 @@ void	ft_putstr(char *str)
 	write(1, "\n", 1);
 }
 
-void	ft_reorder(int argc, char **argv)
+void	ft_print_argv(int argc, char **argv)
 {
 	int	i;
 
@@ -56,11 +54,15 @@ int	main(int argc, char **argv)
 	char	*temp;
 
 	i = 1;
+
+	// the two loops are used to check all the parameters with each other
 	while (i < argc)
 	{
 		j = 1;
 		while (j < argc)
 		{
+			// If there is a negative difference between the argv parameters
+			// the strings are exchanged
 			if (ft_strcmp(argv[i], argv[j]) < 0)
 			{
 				temp = argv[i];
@@ -71,5 +73,7 @@ int	main(int argc, char **argv)
 		}
 		i++;
 	}
-	ft_reorder(argc, argv);
+
+	// print the strings
+	ft_print_argv(argc, argv);
 }

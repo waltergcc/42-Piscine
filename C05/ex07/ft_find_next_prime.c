@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+// #include <stdio.h>
 
+// We use the function created in the previous exercise
+// To check if 'nb' is prime or not
 int	ft_is_prime(int nb)
 {
 	int	i;
@@ -30,12 +32,19 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
+	// While 'nb' is not prime, 'nb' is increased
 	while (ft_is_prime(nb) == 0)
 		nb++;
+
+	// In the end, only a prime number is returned
 	return (nb);
 }
-/*
+/* 
 int	main(void)
 {
-	printf("%d", ft_find_next_prime(84));
-}*/
+	printf("What is the next prime of -3? %d\n", ft_find_next_prime(-3));
+	printf("What is the next prime of 6? %d\n", ft_find_next_prime(6));
+	printf("What is the next prime of 13? %d\n", ft_find_next_prime(13));
+	printf("What is the next prime of 25? %d\n", ft_find_next_prime(25));
+	printf("What is the next prime of 84? %d\n", ft_find_next_prime(84));
+} */

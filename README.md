@@ -1,6 +1,6 @@
 # Projects Status
 
-| Project | Final grade | All done | Refactoring |
+| Project | Final grade | All done | Refactored |
 |:-------:|:-----:|:------:|:-----------:|
 | Shell00 | 100% | :heavy_check_mark: | :heavy_check_mark: |
 | Shell01 | 100% | :heavy_check_mark: | :heavy_check_mark: |

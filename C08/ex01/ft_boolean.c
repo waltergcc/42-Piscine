@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// This is the code passed by the exercise
+// If it's have 1 parameter, the return is odd, if you have 2, the return is even
 #include "ft_boolean.h"
 
 void	ft_putstr(char *str)

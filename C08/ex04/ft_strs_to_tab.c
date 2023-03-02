@@ -24,6 +24,7 @@ int	ft_lenght(char *str)
 	return (i);
 }
 
+// Copies one string for another
 char	*ft_strdup(char *str)
 {
 	int		i;
@@ -42,8 +43,10 @@ char	*ft_strdup(char *str)
 	return (arr);
 }
 
+// This function will return a strut array
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
+	// defines an array for the struct
 	struct s_stock_str	*arr;
 	int					i;
 
@@ -51,26 +54,36 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	if (arr == NULL)
 		return (NULL);
 	i = 0;
+
+	// while 'i' is less than the number of parameters
 	while (i < ac)
 	{
 		if (av[i] == NULL)
 			return (NULL);
+
+		// assign values to the variables of the struct
 		arr[i].size = ft_lenght(av[i]);
 		arr[i].str = ft_strdup(av[i]);
 		arr[i].copy = ft_strdup(av[i]);
+
+		// If one of the strings is null, the return is null
 		if (arr[i].str == NULL || arr[i].copy == NULL)
 			return (NULL);
 		i++;
 	}
+	// The last position of the string receives the null
 	arr[i].str = NULL;
 	return (arr);
 }
-/*
-void	print_array(t_stock_str *str)
+
+//the returns of ft_strs_to_tab come to this function
+/* void	print_array(t_stock_str *str)
 {
 	int	i;
 
 	i = 0;
+
+	// Until reach the null the struct informations are printed
 	while (str[i].str != NULL)
 	{
 		printf("Indice: %d - Size: %d - String: %s - Copy: %s\n",
@@ -83,4 +96,4 @@ void	print_array(t_stock_str *str)
 int	main(int argc, char **argv)
 {
 	print_array(ft_strs_to_tab(argc, argv));
-}*/
+} */

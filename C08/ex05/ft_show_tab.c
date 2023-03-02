@@ -19,19 +19,21 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+// Prints the strings using Write
 void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		write(1, &str[i], 1);
+		ft_putchar(str[i]);
 		i++;
 	}
 	ft_putchar('\n');
 }
 
+// Prints the numbers using Write
 void	ft_putnbr(int nb)
 {
 	long int	n;
@@ -51,11 +53,14 @@ void	ft_putnbr(int nb)
 	}
 }
 
+// This function will print the values of the struct
 void	ft_show_tab(struct s_stock_str *par)
 {
 	int	i;
 
 	i = 0;
+
+	// Until reach the null the struct informations are printed
 	while (par[i].str != NULL)
 	{
 		ft_putstr(par[i].str);
@@ -65,7 +70,7 @@ void	ft_show_tab(struct s_stock_str *par)
 		i++;
 	}
 }
-/*
+/* 
 int	ft_lenght(char *str)
 {
 	int	i;
@@ -121,4 +126,4 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 int	main(int argc, char **argv)
 {
 	ft_show_tab(ft_strs_to_tab(argc, argv));
-}*/
+} */

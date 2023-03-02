@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+// #include <string.h>
 
+// This function copies a string for a new one by allocating memory
 char	*ft_strdup(char *src)
 {
 	char	*dest;
@@ -21,28 +22,31 @@ char	*ft_strdup(char *src)
 	int		lenght;
 
 	lenght = 0;
-	while (src[lenght] != '\0')
+	while (src[lenght])
 		lenght++;
+
+	// The space of src lenght + 1 space is allocated in memory to the 'Dest' pointer
 	dest = (char *) malloc(sizeof(char) * (lenght + 1));
-	if (dest != NULL)
-	{
-		i = 0;
-		while (i < lenght)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-		return (dest);
-	}
-	else
+
+	// If there is any problem in the memory allocation, the return is null
+	if (dest == NULL)
 		return (NULL);
+	i = 0;
+
+	// This part makes the copy of 'SRC' for 'Dest'
+	while (i < lenght)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
-/*
+/* 
 int	main(void)
 {
-	char	*src = "Char";
+	char	*src = "string";
 
-	printf("%s\n", ft_strdup(src));
-	printf("%s\n", strdup(src));
-}*/
+	printf("My: %s\n", ft_strdup(src));
+	printf("Or: %s\n", strdup(src));
+} */

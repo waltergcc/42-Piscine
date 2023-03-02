@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
+// #include <stdio.h>
 
-int	ft_lenght(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -24,26 +23,40 @@ int	ft_lenght(char *str)
 	return (i);
 }
 
-char	*ft_all_lenght(int size, char **strs, char *sep)
+char	*ft_all_lenghts(int size, char **strs, char *sep)
 {
 	int		i;
-	int		result;
-	char	*str;
+	int		sum;
+	char	*all_together;
 
-	result = 0;
+	// 'sum' will receive the count of all characters
+	sum = 0;
 	i = 0;
-	while (i < size)
-	{
-		result += ft_lenght(strs[i]);
-		i++;
-	}
-	result += ft_lenght(sep) * size - 1;
+
+	// if negative or zero size, 'sum' receives 1
+	// receives 1 to at the end this space receive the null
 	if (size <= 0)
-		result = 1;
-	str = (char *) malloc(sizeof(char) * result);
-	if (str == NULL)
+		sum = 1;
+
+	// If it's greater than 0, the lenghts count starts
+	else
+	{
+		// count the characters of each string of 'strs'
+		while (i < size)
+		{
+			sum += ft_strlen(strs[i]);
+			i++;
+		}
+		// count the separator.
+		// 'size' - 1 are the times that separators will be needed
+		sum += ft_strlen(sep) * size - 1;
+	}
+
+	// The memory allocation is made for 'STR'
+	all_together = (char *) malloc(sizeof(char) * sum);
+	if (all_together == NULL)
 		return (0);
-	return (str);
+	return (all_together);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
@@ -51,30 +64,50 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		i;
 	int		j;
 	int		c;
-	char	*str;
+	char	*all_together;
 
-	str = ft_all_lenght(size, strs, sep);
+	// 'str' receives the memory allocated to the size of all lenghts
+	all_together = ft_all_lenghts(size, strs, sep);
 	i = 0;
 	c = 0;
+
 	while (size > i)
 	{
 		j = 0;
+
+		// assing the char of str to 'all_together'
 		while (strs[i][j])
 		{
-			str[c++] = strs[i][j++];
+			// The increase in the line serves to save lines
+			all_together[c++] = strs[i][j++];
 		}
 		j = 0;
+
+		// pass all the characters from 'sep' to all_together
 		while (sep[j] && i != size - 1)
 		{
-			str[c++] = sep[j++];
+			all_together[c++] = sep[j++];
 		}
 		i++;
 	}
-	str[c] = '\0';
-	return (str);
+	// In the end it is necessary to include the null
+	all_together[c] = '\0';
+	return (all_together);
 }
-/*
-int	main(int argc, char **argv)
+/* 
+int	main(void)
 {
-	printf("Result: %s - size: %d", ft_strjoin(argc, argv, " "), argc);
-}*/
+    char *strs[] = {"Hello", "world", "this", "is", "a", "test"};
+	int size = 6;
+	char *sep = " ";
+	int	i = 0;
+	char	*all_together = ft_strjoin(size, strs, sep);
+
+	while (i < size)
+	{
+		printf("String in the index %d: %s\n", i, strs[i]);
+		i++;
+	}
+	printf("New string: %s\n", all_together);
+	free(all_together);
+} */

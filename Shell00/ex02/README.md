@@ -1,22 +1,22 @@
 # exo2.tar
 
-> Objetivo: Aprofundar nas permissões dos ficheiros e entender sobre os links.
+> Target: Deepen in file permissions and understand the links.
 <br>
 
-Nesse exercício, além das permissões, data e tamanho, tem algumas particularidas que precisam ser seguidas.
+In this exercise, in addition to permissions, date and size, there are some particularities that need to be followed.
 
 <br>
 
-Os ficheiros **test0** e **test2** são pastas. Precisam ser criadas com `mkdir`.
+The Files ** Test0 ** and ** Test2 ** are folders. They need to be created with `mkdir`.
 ```bash
 mkdir test0 test2
 ```
-O ficheiro **test5** é linkado ao **test 3**. Para fazer esse link é usado o comando `ln`.
+The file ** test5 ** is linked to ** test 3 **. To make this link is used the command `ln`.
 ```bash
-ln test3 test5 #Cria esse arquivo duplicado.
+ln test3 test5 #Create this duplicate file.
 ```
 
-O ficheiro **test 6** é um link simbólico para a pasta **test0**. o parâmetro `-s` cria o link simbólico.
+The File ** Test 6 ** is a symbolic link to the ** Test0 ** folder. The `-s` parameter creates the symbolic link.
 ```bash
 ln -s test0 test6
 ```

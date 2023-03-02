@@ -1,16 +1,16 @@
 #!/bin/sh
-# Para testar esse bash é necessário descomentar as varíaveis abaixo. Descomentar apenas para testar. Para subir ao sistema precisa estar comentado ou deletar essas linhas.
+# To test this Bash you need to uncomment the variables below. uncomment only to test. To push to the system these lines can't be uncomment.
 #FT_LINE1=7 
 #FT_LINE2=15 
 
-cat /etc/passwd | \ #Exibe o conteúdo sobre os logins do sistema
-	sed '/^#/d' | \ #Remove as linhas com comentários
-	awk 'NR%2==0' | \ #Seleciona apenas as linhas ímpares
-	cut -d: -f1 | \ #Extrai a primeira coluna antes do ":". Nesse caso o nome do usuário.
-	rev | \ #Inverte a ordem dos caracteres
-	sort -r | \ #Ordena em ordem inversa a alfabética
-	sed -n "${FT_LINE1},${FT_LINE2}p" | \ #Imprime as linhas que estão entre as variáveis passadas
-	tr '\n' ' '  | \ #Substitui a nova linha por espaço
-	sed 's+ +, +g' | \ #Substitui os espaços por vírgula seguida de espaço.
-	sed 's+, $+.+g' | \ #Substitui a última vírgula por ponto.
-	tr -d '\n' #Remove a quebra de linha no final
+cat /etc/passwd | \ # Show the content about system logins
+	sed '/^#/d' | \ # Removes the lines with comments
+	awk 'NR%2==0' | \ # Select only the odd lines
+	cut -d: -f1 | \ # It extracts the first column before the ":". In this case the username.
+	rev | \ # Reverses the order of characters
+	sort -r | \ # Order in reverse order alphabetical
+	sed -n "${FT_LINE1},${FT_LINE2}p" | \ # Prints the lines that are among the past variables
+	tr '\n' ' '  | \ # Replaces the new line with space
+	sed 's+ +, +g' | \ # Replaces the spaces with comma followed by space.
+	sed 's+, $+.+g' | \ # Replaces the last comma with point.
+	tr -d '\n' # Removes the new line at the end

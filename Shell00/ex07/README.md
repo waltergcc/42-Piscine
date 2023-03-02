@@ -1,12 +1,12 @@
 # Diff
 
-O comando `patch` aplica modificações em arquivos. Os arquivos **a** e **sw.diff** precisam estar na mesma pasta.
+The `patch` command applies changes of files to other files. The ** a ** and ** sw.diff ** files need to be in the same folder.
 
-`a` nome do arquivo original.
+`a` Original file name.
 
-`sw.diff` arquivo que contém as diferenças.
+`sw.diff` file that contains the differences.
 
-`-o` gera um output com o nome `b` com as diferenças entre o arquivo a e o diff.
+`-o` generates an output with the name `b` with the differences between file 'a' and 'sw.siff'.
 
 ```bash
 patch a sw.diff -o b

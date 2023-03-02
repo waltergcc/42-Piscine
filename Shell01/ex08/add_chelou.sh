@@ -1,5 +1,5 @@
 #!/bin/bash
-# Para testar esse bash é necessário descomentar as varíaveis abaixo. Descomentar apenas para testar. Para subir ao sistema precisa estar comentado ou deletar essas linhas.
+# To test this Bash you need to uncomment the variables below. uncomment only to test. To push to the system these lines can't be uncomment.
 
 #-------------Teste 1
 #str1="\'?"
@@ -15,11 +15,11 @@
 #FT_NBR1=$barraspas$excl$barraspas$excl$barraspas$excl$barraspas$excl$barraspas$excl$barraspas
 #FT_NBR2=dcrcmcmooododmrrrmorcmcrmomo
 
-echo $FT_NBR1 + $FT_NBR2 | \ #Concatena as duas strings
-	sed "s/'/0/g" | \ #Substitui aspas simples por 0
-	tr '\\"?!' 1234 | \ #Substitui \ por 1, " por 2, ? por 3 e ! por 4
-	tr 'mrdoc' 01234 | \ #Substitui m por 0, r por 1, d por 2, o por 3 e c por 4.
-	xargs echo 'obase=13; ibase=5;' | \ #Define que a base de entrada é 5, e a de saída é 13.
-	bc | \ #Executa a conversão entre as duas bases.
-	tr 0123456789ABC 'gtaio luSnemf' #Substitui os digitos da base 13 pela cifra passada
+echo $FT_NBR1 + $FT_NBR2 | \ # Concatenate the two strings
+	sed "s/'/0/g" | \ # Replaces simple quotes with 0
+	tr '\\"?!' 1234 | \ # Replaces '\' 'by 1, '"' by 2, '?' By 3 and '!' By 4
+	tr 'mrdoc' 01234 | \ # Replaces m by 0, r by 1, d by 2, o by 3 and c by 4.
+	xargs echo 'obase=13; ibase=5;' | \ # It defines that the input base is 5, and the output is 13.
+	bc | \ # Execute the conversion between the two bases.
+	tr 0123456789ABC 'gtaio luSnemf' # Replaces the digits of base 13 with the past dictionary
 

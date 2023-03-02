@@ -1,22 +1,22 @@
 # ft_magic
 
-#### Entendendo a escrita do arquivo:
+#### Understanding the writing of the file:
 ```
 41 string 42  42 file
 └┬┘└─┬──┘ └┬┘ └──┬───┘
- │   │     │     └─── Texto a ser exibido quando os critérios forem achados.
- │   │     └───────── O texto a ser procurado é 42.
- │   └─────────────── Procura uma correspodência do tipo string.
- └─────────────────── Começa a procura a partir do byte 42. 
+ │   │     │     └─── Text to be displayed when the criteria are found.
+ │   │     └───────── The text to be searched is 42.
+ │   └─────────────── Search for a string type correspondence.
+ └─────────────────── The search begins from byte 42. 
 ```
-É 41 porque o índice começa em 0. Sendo assim o 42º é o 41. 
+It is 41 because the index starts at 0. the 42º is 41. 
 
 
-Para testar o magic file precisa compilar o arquivo usando o comando `file`.
+To test the Magic File it needs to compiled using the `File` command.
 ```bash
 file -C -m ft_magic
 ```
-Após compilado é gerado um arquivo .mgc. Para listar os arquivos e mostrar a correspodência definidas no ft_magic.
+After compiled, a .mgc file is generated. To list the files and show the defined correspondence in ft_magic use this command.
 ```bash
 file -m ft_magic.mgc *
 ```

@@ -1,14 +1,14 @@
 # Create file 'z'
 
-> Objetivo: Criar arquivos diretamente pelo shell
+> Target: Create files directly through Shell
 
 <br>
 
-O comando `cat` permite criar um arquivo e já digitar o texto que ele irá conter.
+The `cat` command allows you to create a file and already type the text it will contain.
 ```bash
  cat > z
 ```
-Logo em seguida basta digitar o texto e em seguida pressionar as teclas `Ctrl+D` para encerrar a digitação.
+Then just type the text and then press the `Ctrl+D` keys to end the typing.
 
 ```bash
 Z

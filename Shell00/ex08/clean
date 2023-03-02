@@ -1,8 +1,8 @@
 find . -type f \( -name '#*#' -o -name '*~' \) -print -delete
-# find .: procura no diretório atual e seus subdiretórios.
-# -type f: busca apenas arquivos.
-# -name '#*#: Procura apenas arquivos que começam com "#" e terminam com "#".
-# -o: Operado lógico Ou. Se achar umas das condições, o retorno é verdadeiro.
-# -name '*~': Procura apenas arquivos que terminam com "~".
-# -print: exibe os arquivos encontrados.
-# -delete: deleta os arquivos encontrados.
+# find .: Search in the current directory and its subdireories.
+# -type f: Search only files.
+# -name '#*#: Search for files that start with "#" and end with "#".
+# -o: Logical operator or.If it find one of the conditions, the return is true.
+# -name '*~': Search for files only ending with "~".
+# -print: Show the files found.
+# -delete: delete the files found.

@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-# NAME recebe o do arquivo de biblioteca estática
+# NAME receives the static library file
 NAME = libft.a
 
 # SRCS has the list of font files that will be compiled

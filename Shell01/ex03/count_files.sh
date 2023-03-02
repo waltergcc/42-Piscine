@@ -1,4 +1,4 @@
 #!/bin/bash
 find . | wc -l
-# |: O pipe redireciona a saída do comando anterior próximo.
-# wc -l: Conta o número de linhas.
+# |: The pipe redirects the output of the previous command to the next.
+# wc -l: Count the number of lines.

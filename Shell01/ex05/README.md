@@ -1,9 +1,9 @@
 # \"\\\?\$\*\'MaRViN\'\*\$\?\\\"
 
-> Objetivo: Saber trabalhar com caracteres especiais.
+> Target: Knowing how to work with special characters.
 
-Para criar ficheiros com caracteres especiais é necessário colocar `\` antes do caracter.
-Para aspas duplas `"` é necessário usar duas `\\`. O arquivo pode ter apenas 2 bytes. Para o arquivo feito no cat ter apenas 2 bytes basta pressionar `Ctrl+D` duas vezes.
+To create files with special characters you need to put `\` before the character.
+For double quotes `" `You need to use two `\\ `. The file can only have 2 bytes. For the file made in the cat having just 2 bytes just press` ctrl+d` twice.
 ```bash
 cat > \"\\\?\$\*\'MaRViN\'\*\$\?\\\"
 42

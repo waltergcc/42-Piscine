@@ -1,21 +1,21 @@
 # id_rsa_pub
 
-> Objetivo: Entender sobre as chaves do computador.
+> target: Understand about the computer keys.
 
 <br>
 
-O comando `ssh-keygen` gera a chave pública.
+The `ssh-Keygen` command generates the public key.
 ```bash
 ssh-keygen
 ```
 
-O comando `cd` filtra o diretório que tem esses arquivos
+The command `cd` filters the directory that has these files
 ```bash
 cd ~/.ssh
-ls # exibe os arquivos
+ls # show the files
 ```
 
-`cat` exibe o conteúdo da chave. Basta copiar o conteúdo da chave e colar no ficheiro pedido no exercício.
+`cat` Shows the key content. Just copy the key content and paste in the file requested in the exercise.
 ```bash
 cat id_rsa.pub
 ```

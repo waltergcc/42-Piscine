@@ -1,5 +1,5 @@
 git ls-files --others --ignored --exclude-standard
-# git ls-files: lista os arquivos que estão no repositório.
-# --others: exibe os arquivos que não estão no índice do Git.
-# --ignored: exibe os arquivos ignorados que foram definidos no .gitignore.
-# --exclude-standard: lista os arquivos excluidos por padrão.
+# git ls-files: lists the files that are in the repository.
+# --others: Displays files that are not in the GIT index.
+# --ignored: Displays the ignored files that were defined in .gitignore.
+# --exclude-standard: lists the files deleted by default.

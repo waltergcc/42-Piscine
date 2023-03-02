@@ -1,35 +1,35 @@
 # TestShell00.tar
 
-> Objetivo: Alterar permissões, data e tamanho dos ficheiros pelo shell
+> Target: Change permissions, date and size of files by Shell
 
 <br>
 
-O comando `touch` permite criar ficheiros de forma rápida
+The `Touch` command allows you to create files quickly
 ```bash
 touch testShell00
 ```
 
-O comando `truncate` `-s` altera o tamanho para 40 bytes. `-s` é o argumento para alterar o size.
+The command `truncate` `-s` changes the size to 40 bytes.`-s` is the argument for changing the size.
 ```bash
 truncate -s 40 testShell00
 ```
 
-`touch` `-t` permite alterar a data do arquivo. O padrão é AAAAMMDDHHMM - Ano:Mês:Dia:Hora:Minuto
+`touch` `-t` Allows you to change the file date. The default is aaaammddhhmm - Year:Month:Day:Hour:Minute
 ```bash
 touch -t 202006012342 testShell00
 ```
 
-`chmod` altera as permissões dos arquivos. Para mais informações: https://www.infowester.com/linuxpermissoes.php
+`chmod` Changes file permissions. For more information: https://www.infowester.com/linuxpermissoes.php
 ```bash
-chmod 455 testShell00 #455 altera para -r--r-xr-x
+chmod 455 testShell00 #455 change for -r--r-xr-x
 ```
 
-`tar` `-cf` compacta o arquivo.
+`tar` `-cf` Compact the file.
 ```bash
 tar -cf testShell00.tar testShell00
 ```
 
-O comando usado para descompactar é `tar` `-xvf`. Descompactar pelo Shell não altera as permissões e data de criação do arquivo.
+The command used to unzip is `tar` `-xvf`. Unzip by Shell doesn't change permissions and file creation date.
 ```bash
 tar -xvf testShell00.tar
 ```

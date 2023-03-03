@@ -14,4 +14,4 @@
 | C07 | 60% | :heavy_check_mark: |
 | C08 | 100% | :heavy_check_mark: |
 | C09 | 100% | :heavy_check_mark: |
-| C10 | :x: | 3/4 |
+| C10 | :x: | :heavy_check_mark: |

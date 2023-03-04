@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_front.c                               :+:      :+:    :+:   */
+/*   ft_list_push_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 22:55:11 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/04 22:20:22 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-// Insert a new element at the beginning of the chained list
-void	ft_list_push_front(t_list **begin_list, void *data)
+// Insert a new element at the end of the chained list
+void    ft_list_push_back(t_list **begin_list, void *data)
 {
-	t_list *elem;
+    t_list    *list;
 
-	// If the list is not empty, it creates a new element and adds it at the beginning
-	if(*begin_list)
-	{
-		elem = ft_create_elem(data);
-		elem->next = *begin_list;
-		*begin_list = elem;
-	}
+    list = *begin_list;
+
+	// If the list is not empty, it creates a new element and adds it at the ending
+    if (list)
+    {
+		// Until it reaches the last value of the list
+		// 'list_next' receives the new element
+        while (list->next)
+            list = list->next;
+        list->next = ft_create_elem(data);
+    }
 	// If the list is empty, it creates a new element and defines it as the start of the list
-	else
-		*begin_list = ft_create_elem(data);
+    else
+        *begin_list = ft_create_elem(data);
 }
 /* 
 // Creates a t_list element that is a struct
@@ -72,9 +76,9 @@ int main(void)
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
-	ft_list_push_front(&list, ptr1);
-	ft_list_push_front(&list, ptr2);
-	ft_list_push_front(&list, ptr3);
+	ft_list_push_back(&list, ptr1);
+	ft_list_push_back(&list, ptr2);
+	ft_list_push_back(&list, ptr3);
 	print_list(list);
 	free(list);
 } */

@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_front.c                               :+:      :+:    :+:   */
+/*   ft_list_last.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 22:55:11 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/04 22:04:18 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-// Insert a new element at the beginning of the chained list
-void	ft_list_push_front(t_list **begin_list, void *data)
+// Show the last value of the list
+t_list	*ft_list_last(t_list *begin_list)
 {
-	t_list *elem;
+	// If the list is empty returns null
+	if (!begin_list)
+		return (NULL);
+	
+	// Until it reaches the last value of the list
+	// 'begin_list' receives the value of next
+	while (begin_list->next)
+		begin_list = begin_list->next;
 
-	// If the list is not empty, it creates a new element and adds it at the beginning
-	if(*begin_list)
-	{
-		elem = ft_create_elem(data);
-		elem->next = *begin_list;
-		*begin_list = elem;
-	}
-	// If the list is empty, it creates a new element and defines it as the start of the list
-	else
-		*begin_list = ft_create_elem(data);
+	// The last value stored in 'begin_list' is returned
+	return (begin_list);
 }
 /* 
 // Creates a t_list element that is a struct
@@ -64,7 +63,6 @@ void	print_list(t_list *list)
 int main(void)
 {
 	t_list	*list = (t_list *)malloc(sizeof(t_list));
-	list = NULL;
 	int a = 1;
 	int b = 2;
 	int c = 3;
@@ -72,9 +70,12 @@ int main(void)
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
-	ft_list_push_front(&list, ptr1);
-	ft_list_push_front(&list, ptr2);
-	ft_list_push_front(&list, ptr3);
+	list = ft_create_elem(ptr1);
+	list->next = ft_create_elem(ptr2);
+	list->next->next = ft_create_elem(ptr3);
 	print_list(list);
+	
+	// Show the last value of the list
+	print_list(ft_list_last(list));
 	free(list);
 } */

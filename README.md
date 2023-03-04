@@ -15,4 +15,4 @@
 | C08 | 100% | :heavy_check_mark: |
 | C09 | 100% | :heavy_check_mark: |
 | C10 | :x: | :heavy_check_mark: |
-| C11 | :x: | 6/8 |
+| C11 | :x: | :heavy_check_mark: |

@@ -32,6 +32,8 @@ int	*ft_map(int *tab, int length, int (*f)(int))
 	{
         // 'Squared_tab'receives the value of each position
         // of 'tab' multiplied by the past function as a pointer
+		// The '*' is the argument for dereference.
+		// 'Square_tab' receives the value that comes from the function
 		squared_tab[i] = (*f)(tab[i]);
 		i++;
 	}

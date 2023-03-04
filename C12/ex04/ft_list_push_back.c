@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 22:20:22 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/04 23:04:28 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void    ft_list_push_back(t_list **begin_list, void *data)
     else
         *begin_list = ft_create_elem(data);
 }
-/* 
 // Creates a t_list element that is a struct
 t_list	*ft_create_elem(void *data)
 {
@@ -52,7 +51,7 @@ t_list	*ft_create_elem(void *data)
     // Returns the created element
 	return (elem);
 }
-
+/* 
 // Prints the values contained in each element of the chained list
 void	print_list(t_list *list)
 {

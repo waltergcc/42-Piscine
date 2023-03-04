@@ -16,3 +16,4 @@
 | C09 | 100% | :heavy_check_mark: |
 | C10 | :x: | :heavy_check_mark: |
 | C11 | :x: | :heavy_check_mark: |
+| C12 | :x: | 2/18 |

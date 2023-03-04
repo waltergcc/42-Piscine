@@ -66,7 +66,7 @@ void	do_op(char *fst_nbr, char *op, char *snd_nbr)
 		ft_putstr("Stop : modulo by zero");
 	else
 	{
-		// 'result' recebe a operação matemática entre os dois número
+		// 'Result' receives the mathematical operation between a and b
 		result *= (operator(a, op, b));
 
 		// Prints 'result'

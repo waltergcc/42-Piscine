@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_push_strs.c                                :+:      :+:    :+:   */
+/*   ft_list_at.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 16:23:32 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/06 16:39:58 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Adds a set of strings to a list
-t_list *ft_list_push_strs(int size, char **strs)
+// Returns the list in the position passed by 'nbr'
+t_list *ft_list_at(t_list *begin_list, unsigned int nbr)
 {
-	t_list	*node;
+    t_list *current = begin_list;
+    unsigned int i = 0;
 
-	// If 'size' is negative or zero, returns 0
-	if(size <= 0)
-		return (0);
+	// While the list is not over and the counter is smaller than 'nbr'
+    while (current != NULL && i < nbr)
+    {
+		// The list in the current position is receiving the next
+        current = current->next;
+        i++;
+    }
 
-	// node receives the string in the last position
-	node = ft_create_elem((void *)strs[size - 1]);
+	// If 'i' is equal to the number past, returns the value of the list
+    if (i == nbr && current != NULL)
+        return (current);
 
-	// The next position on the list receives the next string in a recursive way
-	node->next = ft_list_push_strs(size - 1, strs);
-	return(node);
+	// If not it returns null
+    else
+        return (NULL);
 }
-
+/*
 // Creates a t_list element that is a struct
 t_list	*ft_create_elem(void *data)
 {
@@ -48,29 +54,22 @@ t_list	*ft_create_elem(void *data)
     // Returns the created element
 	return (elem);
 }
-/* 
-// Prints the values contained in each element of the chained list
-void	print_list(t_list *list)
-{
-	t_list *current = list;
-
-	while (current != NULL)
-	{
-		printf("String: %s\n", (char *)current->data);
-		current = current->next;
-	}
-}
-
+ 
 int main(void)
 {
-	char	**strs = (char **)malloc(sizeof(char *) * 3);
-	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
-	
-	strs[0] = "test";
-	strs[1] = "of";
-	strs[2] = "strings";
-	linked_list = ft_list_push_strs(3, strs);
-	print_list(linked_list);
+	t_list	*linked_list;
+	int a = 1;
+	int b = 2;
+	int c = 3;
+	void *ptr1 = &a;
+	void *ptr2 = &b;
+	void *ptr3 = &c;
+	int	n = 3;
+
+	linked_list = ft_create_elem(ptr1);
+	linked_list->next = ft_create_elem(ptr2);
+	linked_list->next->next = ft_create_elem(ptr3);
+	if (ft_list_at(linked_list, n))
+		printf("Value of position %d: %d\n", n, *(int *)ft_list_at(linked_list, n)->data);
 	free(linked_list);
-	free(strs);
 } */

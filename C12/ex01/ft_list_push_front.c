@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 23:01:51 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:52:35 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 // Insert a new element at the beginning of the chained list
 void	ft_list_push_front(t_list **begin_list, void *data)
 {
-	t_list *elem;
+	t_list *node;
 
 	// If the list is not empty, it creates a new element and adds it at the beginning
 	if(*begin_list)
 	{
-		elem = ft_create_elem(data);
-		elem->next = *begin_list;
-		*begin_list = elem;
+		node = ft_create_elem(data);
+		node->next = *begin_list;
+		*begin_list = node;
 	}
 	// If the list is empty, it creates a new element and defines it as the start of the list
 	else
@@ -48,7 +48,7 @@ t_list	*ft_create_elem(void *data)
     // Returns the created element
 	return (elem);
 }
-/*
+/* 
 // Prints the values contained in each element of the chained list
 void	print_list(t_list *list)
 {
@@ -63,8 +63,8 @@ void	print_list(t_list *list)
 
 int main(void)
 {
-	t_list	*list = (t_list *)malloc(sizeof(t_list));
-	list = NULL;
+	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
+	linked_list = NULL;
 	int a = 1;
 	int b = 2;
 	int c = 3;
@@ -72,9 +72,9 @@ int main(void)
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
-	ft_list_push_front(&list, ptr1);
-	ft_list_push_front(&list, ptr2);
-	ft_list_push_front(&list, ptr3);
-	print_list(list);
-	free(list);
+	ft_list_push_front(&linked_list, ptr1);
+	ft_list_push_front(&linked_list, ptr2);
+	ft_list_push_front(&linked_list, ptr3);
+	print_list(linked_list);
+	free(linked_list);
 } */

@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 23:04:28 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:48:43 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 // Insert a new element at the end of the chained list
 void    ft_list_push_back(t_list **begin_list, void *data)
 {
-    t_list    *list;
+    t_list    *node;
 
-    list = *begin_list;
+    node = *begin_list;
 
 	// If the list is not empty, it creates a new element and adds it at the ending
-    if (list)
+    if (node)
     {
 		// Until it reaches the last value of the list
-		// 'list_next' receives the new element
-        while (list->next)
-            list = list->next;
-        list->next = ft_create_elem(data);
+		// 'node_next' receives the new element
+        while (node->next)
+            node = node->next;
+        node->next = ft_create_elem(data);
     }
 	// If the list is empty, it creates a new element and defines it as the start of the list
     else
@@ -66,8 +66,8 @@ void	print_list(t_list *list)
 
 int main(void)
 {
-	t_list	*list = (t_list *)malloc(sizeof(t_list));
-	list = NULL;
+	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
+	linked_list = NULL;
 	int a = 1;
 	int b = 2;
 	int c = 3;
@@ -75,9 +75,9 @@ int main(void)
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
-	ft_list_push_back(&list, ptr1);
-	ft_list_push_back(&list, ptr2);
-	ft_list_push_back(&list, ptr3);
-	print_list(list);
-	free(list);
+	ft_list_push_back(&linked_list, ptr1);
+	ft_list_push_back(&linked_list, ptr2);
+	ft_list_push_back(&linked_list, ptr3);
+	print_list(linked_list);
+	free(linked_list);
 } */

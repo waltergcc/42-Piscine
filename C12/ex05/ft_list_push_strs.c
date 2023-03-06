@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 22:58:58 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/06 15:48:57 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 // Adds a set of strings to a list
 t_list *ft_list_push_strs(int size, char **strs)
 {
-	t_list	*list;
+	t_list	*node;
 
 	// If 'size' is negative or zero, returns 0
 	if(size <= 0)
 		return (0);
 
-	// list receives the string in the last position
-	list = ft_create_elem((void *)strs[size - 1]);
+	// node receives the string in the last position
+	node = ft_create_elem((void *)strs[size - 1]);
 
 	// The next position on the list receives the next string in a recursive way
-	list->next = ft_list_push_strs(size - 1, strs);
-	return(list);
+	node->next = ft_list_push_strs(size - 1, strs);
+	return(node);
 }
 
 // Creates a t_list element that is a struct
@@ -64,13 +64,13 @@ void	print_list(t_list *list)
 int main(void)
 {
 	char	**strs = (char **)malloc(sizeof(char *) * 3);
-	t_list	*list = (t_list *)malloc(sizeof(t_list));
+	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
 	
 	strs[0] = "test";
 	strs[1] = "of";
 	strs[2] = "strings";
-	list = ft_list_push_strs(3, strs);
-	print_list(list);
-	free(list);
+	linked_list = ft_list_push_strs(3, strs);
+	print_list(linked_list);
+	free(linked_list);
 	free(strs);
 } */

@@ -1,15 +1,11 @@
-# C 00
+# C 02
 
 In this file you can find videos that can help you to better understand some concepts covered in this project. **NOTE:** These videos don't have the resolution of the exercises.
 
 ### Useful links:
 
-Variables: https://www.youtube.com/watch?v=ghCbURMWBD8&t=14s
-
-While: https://www.youtube.com/watch?v=v-K-4KuA8mQ
-
-If statements: https://www.youtube.com/watch?v=HQ3dCWjfRZ4
+String functions: https://www.youtube.com/watch?v=XdnmsKUvGsc
 
 ASCII table: https://www.youtube.com/watch?v=zB85kTs-sEw
 
-Recursive function: https://www.youtube.com/watch?v=rf60MejMz3E
+Hexadecimal base: https://www.youtube.com/watch?v=QJW6qnfhC70

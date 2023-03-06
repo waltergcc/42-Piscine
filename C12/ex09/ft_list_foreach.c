@@ -1,46 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_reverse.c                                  :+:      :+:    :+:   */
+/*   ft_list_foreach.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 18:15:04 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:16:03 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-// reverses the values on the list
-void ft_list_reverse(t_list **begin_list)
-{
-	t_list	*prev;
-	t_list	*current;
-	t_list	*next;
-
-	current = (*begin_list);
-	prev = NULL;
-	next = NULL;
-	while(current != NULL)
-	{
-		// 'Next' keeps the address of the next position
-		next = current->next;
-
-		// The next position receives the previous
-		current->next = prev;
-
-		// The previous position receives the current
-		prev = current;
-
-		// The current position receives the address that was stored in Next
-		current = next;
-	}
-	*begin_list = prev;
-}
 /* 
+// This function multiplied the value passed by 3
+void ft_mul(void *data)
+{
+	*(int *)data *= 3;
+}
+ */
+// Adds one value for each item on the list
+void ft_list_foreach(t_list *begin_list, void (*f)(void *))
+{
+	t_list	*list_ptr;
+
+	while(begin_list != NULL)
+	{
+		list_ptr = begin_list;
+
+		// Call the function to incremeant the data value
+		(*f)(list_ptr->data);
+
+		// advances to the next list
+		begin_list = begin_list->next;
+	}
+}
+/*  
 // Creates a t_list element that is a struct
 t_list	*ft_create_elem(void *data)
 {
@@ -86,7 +82,7 @@ int main(void)
 	linked_list->next->next = ft_create_elem(ptr3);
 	printf("Linked list before:\n");
 	print_list(linked_list);
-	ft_list_reverse(&linked_list);
+	ft_list_foreach(linked_list, &ft_mul);
 	printf("Linked list after:\n");
 	print_list(linked_list);
 	free(linked_list);

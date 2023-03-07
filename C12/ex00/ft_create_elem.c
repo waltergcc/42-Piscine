@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_elem.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wcorrea- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/04 15:39:05 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:31:12 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "ft_list.h"
 
@@ -31,13 +31,21 @@ t_list	*ft_create_elem(void *data)
     // Returns the created element
 	return (elem);
 }
-/*  
+/* 
 int main(void)
 {
 	int		a = 42;
-	t_list	*list = ft_create_elem(&a);
 
+	// creation of the list;
+	t_list	*list;
+
+	// creation of a element is the list
+	list = ft_create_elem(&a);
+
+	// Prints the elements of the list
 	printf("Value of elem->data: %d\n", *(int *)list->data);
 	printf("Value of elem->next: %p\n", (void *)list->next);
+
+	// free of memory allocated
 	free(list);
 } */

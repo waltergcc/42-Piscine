@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 16:23:32 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:08:53 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,14 +63,24 @@ void	print_list(t_list *list)
 
 int main(void)
 {
+	// creation of the array of strings
 	char	**strs = (char **)malloc(sizeof(char *) * 3);
+
+	// declaration of the list
 	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
 	
+	// assign values to strings
 	strs[0] = "test";
 	strs[1] = "of";
 	strs[2] = "strings";
+
+	// Adds a set of strings to a list
 	linked_list = ft_list_push_strs(3, strs);
+
+	// Prints the list
 	print_list(linked_list);
+
+	// free of memory allocated
 	free(linked_list);
 	free(strs);
 } */

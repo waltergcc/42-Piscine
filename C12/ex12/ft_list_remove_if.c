@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/07 01:11:27 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:48:06 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_cmp(void *data1, void *data2)
 	return (*(int *)data1 - *(int *)data2);
 }
  */
-// Removes elements from a listed list based on a reference value
+// Removes elements from a Linked list based on a reference value
 void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (*free_fct)(void *))
 {
     t_list *list_ptr = *begin_list;
@@ -97,22 +97,33 @@ void	print_list(t_list *list)
 int main(void)
 {
 	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
+
+	// declaration of values
 	int a = 1;
 	int b = 2;
 	int c = 3;
 	int d = 1;
 	
+	// declaration and assign of pointers
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
 	void *data_ref = &d;
+
+	// Creation of List Elements
 	linked_list = ft_create_elem(ptr1);
 	linked_list->next = ft_create_elem(ptr2);
 	linked_list->next->next = ft_create_elem(ptr3);
+
 	printf("Linked list before:\n");
 	print_list(linked_list);
+
+	// Removes elements from a Linked list based on the reference value
 	ft_list_remove_if(&linked_list, data_ref, &ft_cmp, &ft_free);
-	printf("Linked list after:\n");
+
+	printf("\nLinked list after:\n");
 	print_list(linked_list);
+
+	// free of memory allocated
 	free(linked_list);
 } */

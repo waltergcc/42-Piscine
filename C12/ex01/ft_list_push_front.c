@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 15:52:35 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:27:13 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Insert a new element at the beginning of the chained list
+// Insert a new element at the beginning of the linked list
 void	ft_list_push_front(t_list **begin_list, void *data)
 {
 	t_list *node;
@@ -64,17 +64,33 @@ void	print_list(t_list *list)
 int main(void)
 {
 	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
-	linked_list = NULL;
+
+	// declaration of values
 	int a = 1;
 	int b = 2;
 	int c = 3;
+	int d = 0;
 
-	void *ptr1 = &a;
-	void *ptr2 = &b;
-	void *ptr3 = &c;
-	ft_list_push_front(&linked_list, ptr1);
-	ft_list_push_front(&linked_list, ptr2);
-	ft_list_push_front(&linked_list, ptr3);
+	// declaration and assign of pointers
+	void *p1 = &a;
+	void *p2 = &b;
+	void *p3 = &c;
+	void *p4 = &d;
+
+	// Creation of List Elements
+	linked_list = ft_create_elem(p1);
+	linked_list->next = ft_create_elem(p2);
+	linked_list->next->next = ft_create_elem(p3);
+
+	printf("Linked list before:\n");
 	print_list(linked_list);
+
+	// Insert a new element at the beginning of the linked list
+	ft_list_push_front(&linked_list, p4);
+
+	printf("\nLinked list after:\n");
+	print_list(linked_list);
+
+	// free of memory allocated
 	free(linked_list);
 } */

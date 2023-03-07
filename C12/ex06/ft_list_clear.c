@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 15:49:24 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:15:43 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void print_and_free(void *data)
 	data = NULL;
 }
  */
-// limpa todas as informações da lista
+// Clean all information on the list
 void ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
 {
 	// Variables are declared to prevent memory from being released at the wrong time
@@ -61,16 +61,24 @@ t_list	*ft_create_elem(void *data)
 int main(void)
 {
 	t_list	*linked_list;
+
+	// declaration of values
 	int a = 1;
 	int b = 2;
 	int c = 3;
 
+	// declaration and assign of pointers
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
+
+	// Creation of List Elements
 	linked_list = ft_create_elem(ptr1);
 	linked_list->next = ft_create_elem(ptr2);
 	linked_list->next->next = ft_create_elem(ptr3);
+
+	// Clean all information on the list
 	ft_list_clear(linked_list, &print_and_free);
+
 	print_list(linked_list);
 } */

@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 22:17:30 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:01:41 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,20 +70,31 @@ void	print_list(t_list *list)
 int main(void)
 {
 	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
+
+	// declaration of values
 	int a = 1;
 	int b = 2;
 	int c = 3;
 
+	// declaration and assign of pointers
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
+
+	// Creation of List Elements
 	linked_list = ft_create_elem(ptr1);
 	linked_list->next = ft_create_elem(ptr2);
 	linked_list->next->next = ft_create_elem(ptr3);
+
 	printf("Linked list before:\n");
 	print_list(linked_list);
+
+	// Adds one value for each item on the list
 	ft_list_foreach(linked_list, &ft_mul);
-	printf("Linked list after:\n");
+
+	printf("\nLinked list after:\n");
 	print_list(linked_list);
+
+	// free of memory allocated
 	free(linked_list);
 } */

@@ -6,7 +6,7 @@
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/06 16:39:58 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 14:05:14 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,18 +58,27 @@ t_list	*ft_create_elem(void *data)
 int main(void)
 {
 	t_list	*linked_list;
+
+	// declaration of values
 	int a = 1;
 	int b = 2;
 	int c = 3;
+
+	// declaration and assign of pointers
 	void *ptr1 = &a;
 	void *ptr2 = &b;
 	void *ptr3 = &c;
 	int	n = 3;
 
+	// Creation of List Elements
 	linked_list = ft_create_elem(ptr1);
 	linked_list->next = ft_create_elem(ptr2);
 	linked_list->next->next = ft_create_elem(ptr3);
+
+	// Returns the list in the position passed by 'nbr'
 	if (ft_list_at(linked_list, n))
 		printf("Value of position %d: %d\n", n, *(int *)ft_list_at(linked_list, n)->data);
+
+	// free of memory allocated
 	free(linked_list);
 } */

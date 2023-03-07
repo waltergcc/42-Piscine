@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_sort.c                                     :+:      :+:    :+:   */
+/*   ft_sorted_list_merge.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/07 16:58:11 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:42:42 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,38 @@ void	ft_list_sort(t_list **begin_list, int (*cmp)())
 			current = current->next;
 	}
 }
-/*
+
+// Merge the two lists
+void	ft_list_merge(t_list **begin_list1, t_list *begin_list2)
+{
+	t_list *current;
+	t_list	*prev;
+
+	// 
+	current = (*begin_list1);
+	while(current != NULL)
+	{
+		prev = current;
+		current = current->next;
+	}
+
+	// merge 'list_2' to the end of 'list_1'
+	prev->next = begin_list2;
+}
+
+void	ft_sorted_list_merge(t_list **begin_list1, t_list *begin_list2, int (*cmp) ())
+{
+	// check if the arguments are valid
+	if (!begin_list1 || !begin_list2 || !cmp)
+		return ;
+
+	// Merge the two lists
+	ft_list_merge(begin_list1, begin_list2);
+
+	// Sort the list in crescent order
+	ft_list_sort(begin_list1, cmp);
+}
+/* 
 // Creates a t_list element that is a struct
 t_list	*ft_create_elem(void *data)
 {
@@ -84,15 +115,16 @@ void	print_list(t_list *list)
 int main(void)
 {
 	// declaration of the lists
-	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
+	t_list	*list_1 = (t_list *)malloc(sizeof(t_list));
+	t_list	*list_2 = (t_list *)malloc(sizeof(t_list));
 
 	// declaration of values
 	int a = 15;
 	int b = -3;
-	int c = 0;
+	int c = 9;
 	int d = -178;
 	int e = 986;
-	int f = 9;
+	int f = 0;
 
 	// declaration and assign of pointers
 	void *p1 = &a;
@@ -102,23 +134,29 @@ int main(void)
 	void *p5 = &e;
 	void *p6 = &f;
 
-	// Creation of List Elements
-	linked_list = ft_create_elem(p1);
-	linked_list->next = ft_create_elem(p2);
-	linked_list->next->next = ft_create_elem(p3);
-	linked_list->next->next->next = ft_create_elem(p4);
-	linked_list->next->next->next->next = ft_create_elem(p5);
-	linked_list->next->next->next->next->next = ft_create_elem(p6);
+	// Creation of List_1 Elements
+	list_1 = ft_create_elem(p1);
+	list_1->next = ft_create_elem(p2);
+	list_1->next->next = ft_create_elem(p3);
+
+	// Creation of List_2 Elements
+	list_2 = ft_create_elem(p4);
+	list_2->next = ft_create_elem(p5);
+	list_2->next->next = ft_create_elem(p6);
 
 	printf("List 1 before:\n");
-	print_list(linked_list);
+	print_list(list_1);
 
-	// Sort the list in crescent order
-	ft_list_sort(&linked_list, &ft_cmp);
+	printf("\nList 2 before:\n");
+	print_list(list_2);
+
+	// Insert a new value in a sort list in crescent order
+	ft_sorted_list_merge(&list_1, list_2, &ft_cmp);
 
 	printf("\nList 1 after:\n");
-	print_list(linked_list);
+	print_list(list_1);
 
 	// free of memory allocated
-	free(linked_list);
+	free(list_1);
+	free(list_2);
 } */

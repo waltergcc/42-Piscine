@@ -1,56 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_sort.c                                     :+:      :+:    :+:   */
+/*   ft_list_reverse_fun.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 15:39:02 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/07 16:58:11 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:19:15 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 #include <stdio.h>
 #include <stdlib.h>
-/* 
-int	ft_cmp(void *data1, void *data2)
-{
-	return (*(int *)data1 - *(int *)data2);
-} */
 
-void	ft_list_sort(t_list **begin_list, int (*cmp)())
+void	ft_list_reverse_fun(t_list *begin_list)
 {
 	t_list	*current;
-	void	*temp;
+	t_list	*next;
+	t_list	*temp;
 
-
-	// check if the arguments are valid
-	if (!begin_list || !cmp)
-		return ;
-
-	// Check if the list is empty
-	if (!(*begin_list))
-		return ;
-	current = *begin_list;
-	while (current->next)
-	{	
-		// Checks if the current element is greater than the next
-		if ((*cmp)(current->data, current->next->data) > 0)
+	current = begin_list;
+	while(current)
+	{
+		// 'Next' receives the next address from 'Current'
+		next = current->next;
+		while(next)
 		{
 			// Make the swap of values
 			temp = current->data;
-			current->data = current->next->data;
-			current->next->data = temp;
+			current->data = next->data;
+			next->data = temp;
 
-			// The order restarts from the beginning of the list
-			current = *begin_list;
+			// 'next' go to the next position
+			next = next->next;
 		}
-		else
-			current = current->next;
+		// 'current' go to the next position
+		current = current->next;
 	}
 }
-/*
+/* 
 // Creates a t_list element that is a struct
 t_list	*ft_create_elem(void *data)
 {
@@ -87,34 +76,28 @@ int main(void)
 	t_list	*linked_list = (t_list *)malloc(sizeof(t_list));
 
 	// declaration of values
-	int a = 15;
-	int b = -3;
-	int c = 0;
-	int d = -178;
-	int e = 986;
-	int f = 9;
+	int a = 1;
+	int b = 2;
+	int c = 3;
+	int d = 4;
 
 	// declaration and assign of pointers
 	void *p1 = &a;
 	void *p2 = &b;
 	void *p3 = &c;
 	void *p4 = &d;
-	void *p5 = &e;
-	void *p6 = &f;
 
 	// Creation of List Elements
 	linked_list = ft_create_elem(p1);
 	linked_list->next = ft_create_elem(p2);
 	linked_list->next->next = ft_create_elem(p3);
 	linked_list->next->next->next = ft_create_elem(p4);
-	linked_list->next->next->next->next = ft_create_elem(p5);
-	linked_list->next->next->next->next->next = ft_create_elem(p6);
 
 	printf("List 1 before:\n");
 	print_list(linked_list);
 
-	// Sort the list in crescent order
-	ft_list_sort(&linked_list, &ft_cmp);
+	// reverses the order of the elements by exchanging the data of the node
+	ft_list_reverse_fun(linked_list);
 
 	printf("\nList 1 after:\n");
 	print_list(linked_list);

@@ -12,3 +12,20 @@ Sort array: https://www.youtube.com/watch?v=qLVrwCvVPGo
 <br>
 <br>
 **NOTE:** These videos don't have the resolution of the exercises.
+
+---
+
+### My performance: 100% :heavy_check_mark:
+All exercises have passed correct through Moulinette.
+
+| Project | Validation |
+|:----:|:------------------:|
+| ex00 | :heavy_check_mark: |
+| ex01 | :heavy_check_mark: |
+| ex02 | :heavy_check_mark: |
+| ex03 | :heavy_check_mark: |
+| ex04 | :heavy_check_mark: |
+| ex05 | :heavy_check_mark: |
+| ex06 | :heavy_check_mark: |
+| ex07 | :heavy_check_mark: |
+| ex08 | :heavy_check_mark: |

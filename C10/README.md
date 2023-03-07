@@ -8,3 +8,8 @@ File Handling: https://www.youtube.com/watch?v=MQIF-WMUOL8
 <br>
 <br>
 **NOTE:** These videos don't have the resolution of the exercises.
+
+---
+
+### My performance: Not started :x:
+I didn't subscribe to this project during the Piscine period. All exercises were done after the Piscine end to consolidate knowledge. These exercises didn't have the validation of Moulinette.

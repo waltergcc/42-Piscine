@@ -1,5 +1,9 @@
 # C 06
 
+In this project we will learn how to work with arguments passed through the command line known as 'argc' and 'argv'. All exercises are commented for a better understanding.
+
+---
+
 ### Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>

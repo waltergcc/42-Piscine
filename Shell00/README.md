@@ -1,5 +1,9 @@
 # Shell 00
 
+In these projects we will learn how to use the basic commands of the Linux terminal. All exercises are commented for a better understanding.
+
+---
+
 ### Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>

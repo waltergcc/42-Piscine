@@ -1,5 +1,9 @@
 # Shell 01
 
+In this project we will learn from some more complex cases how to use the differents commands of Shell. We will also use combined commands with each other. All exercises are commented for a better understanding.
+
+---
+
 ### Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>

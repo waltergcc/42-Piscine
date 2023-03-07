@@ -1,5 +1,9 @@
 # C 00
 
+In this project we will learn the basic structure of programs and functions in **C**. We will learn how to use the different types of variables, repetition structures, If statements and how to work with the 'Write' function. We will also learn the basics about the characters of the ASCII table. All exercises are commented for a better understanding.
+
+---
+
 ### Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>

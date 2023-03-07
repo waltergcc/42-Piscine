@@ -1,5 +1,9 @@
 # C 08
 
+In this project we will learn how to work with the 'header' files. We will also learn how to use the structs. All exercises are commented for a better understanding.
+
+---
+
 ### Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>

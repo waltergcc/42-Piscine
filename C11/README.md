@@ -1,5 +1,9 @@
 # C 11
 
+In this project we will learn how to work with functions passed through the parameters as pointers. All exercises are commented for a better understanding.
+
+---
+
 ### Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>

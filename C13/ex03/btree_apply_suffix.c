@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree_apply_prefix.c                               :+:      :+:    :+:   */
+/*   btree_apply_suffix.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:52:04 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/08 01:08:42 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/03/08 01:12:22 by wcorrea-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,26 @@
 void	ft_print(void *item)
 {
 	printf("%s\n", (char *)item);
-}  */
+} */
 
-// Prints the binary tree from the current node
-// in sequence the left subtree, and finally the right subtree
-void	btree_apply_prefix(t_btree *root, void (*applyf)(void *))
+// Prints the binary tree from the left subtree
+// in sequence the right subtree, and finally the current node
+void	btree_apply_suffix(t_btree *root, void (*applyf)(void *))
 {
-	// Prints the node in the first time that is find
-	applyf(root->item);
-
 	// check if on the left is not empty
 	if (root->left)
 
 		// Calls the function recursively by passing the address contained on the left
-		btree_apply_prefix(root->left, applyf);
-
+		btree_apply_suffix(root->left, applyf);
+	
 	// check if on the left is not empty
 	if (root->right)
 
 		// Calls the function recursively by passing the address contained on the left
-		btree_apply_prefix(root->right, applyf);
+		btree_apply_suffix(root->right, applyf);
+		
+	// Prints the node in the third time that is find
+	applyf(root->item);
 }
 /* 
 int main(void)
@@ -52,6 +52,6 @@ int main(void)
 	t_btree	level2_right = {&level3_right_l, &level3_right_r, "5"};
 	t_btree	level1 = {&level2_left, &level2_right, "1"};
 
-	// Applies the prefix order to the binary tree
-	btree_apply_prefix(&level1, ft_print);
-} */
+	// Applies the suffix order to the binary tree
+	btree_apply_suffix(&level1, ft_print);
+}  */

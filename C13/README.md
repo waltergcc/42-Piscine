@@ -9,6 +9,8 @@ In this links bellow you can find videos that can help you to better understand 
 <br>
 <br>
 Binary tree: https://www.youtube.com/watch?v=GzJoqJO1zdI
+
+Prefix, Infix and Suffix: https://www.youtube.com/watch?v=WLvU5EQVZqY
 <br>
 <br>
 **NOTE:** These videos don't have the resolution of the exercises.

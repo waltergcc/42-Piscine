@@ -1,28 +1,43 @@
 #include <unistd.h>
 
-void	ft_write_number(int number)
+void	ft_putchar(char c)
 {
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &"0123456789"[number % 10], 1);
+		write(1, &c, 1);
+}
+
+void	ft_putnbr(int n)
+{
+	if (n >= 0 && n <= 9)
+		ft_putchar(n + '0');
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
 }
 
 int	main(void)
 {
-	int	number;
+	int	i = 1;
 
-	number = 1;
-	while (number <= 100)
+	while (i <= 100)
 	{
-		if (number % 3 == 0 && number % 5 == 0)
+		// If the number is a multiple of 3 and a multiple of 5
+		if (i % 3 == 0 && i % 5 == 0)
 			write(1, "fizzbuzz", 8);
-		else if (number % 3 == 0)
+
+		// If the number is a multiple of 3
+		else if (i % 3 == 0)
 			write(1, "fizz", 4);
-		else if (number % 5 == 0)
+
+		// If the number is a multiple of 5
+		else if (i % 5 == 0)
 			write(1, "buzz", 4);
+
+		// If it is none of the other cases prints the number
 		else
-			ft_write_number(number);
+			ft_putnbr(i);
 		write(1, "\n", 1);
-		number++;
+		i++;
 	}
 }

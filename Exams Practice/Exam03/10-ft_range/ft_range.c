@@ -1,10 +1,12 @@
 #include <stdlib.h>
-#include <stdio.h>
-int        ft_abs(int x)
+// #include <stdio.h>
+
+int        ft_positive(int n)
 {
-    if (x < 0)
-        return (-x);
-    return (x);
+    // If it is negative, change to positive
+    if (n < 0)
+        return (-n);
+    return (n);
 }
 
 int    *ft_range(int start, int end)
@@ -12,46 +14,49 @@ int    *ft_range(int start, int end)
     int        size;
     int        i;
     int        *tab;
-    int        *d;
+    // 'size' receives the range between the start and the end
+    size = ft_positive(end - start) + 1;
 
-    size = ft_abs(end - start) + 1;
-    d = (tab = malloc(size * sizeof(int)));
-    if (!d)
+    // Memory allocation and check
+    tab = (int *)malloc(sizeof(int) * size);
+    if (tab == NULL)
         return (0);
     i = 0;
-	if ( size == 1)
-	tab[0] = start;
-    if (start < end)
+
+    // If Start is less than or equal to the end
+    if (start <= end)
     {
         while (i < size)
         {
+            // tab receives start + 1
             tab[i] = start + i;
             i++;
         }
     }
+    // If Start is greater than end
     else if (start > end)
     {
         while (i < size)
         {
+            // tab receives start - 1
             tab[i] = start - i;
             i++;
         }
     }
     return (tab);
 }
-
+/* 
 int        main(void)
 {
-    int *tab;
     int i = 0;
     int start = 0;
-    int end = 0 ;
-    int size = ft_abs(end - start) + 1;
+    int end = -3;
+    int size = ft_positive(end - start) + 1;
+    int *tab = ft_range(start, end);
     
-    tab = ft_range(start, end);
-    while(i < size)
+    while (i < size)
     {
-    printf("%i, ", tab[i]);
-    i++;
+        printf("%d\n", tab[i]);
+        i++;
     }
-}
+} */

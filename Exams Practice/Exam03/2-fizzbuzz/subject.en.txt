@@ -1,0 +1,39 @@
+Assignment name  : fizzbuzz
+Expected files   : fizzbuzz.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that writes a series of numbers of 1 to 100 on the output
+Standard, all separated by a Newline.
+
+If the number is a multiple of 3, the program must write 'Fizz' instead.
+
+If the number is a multiple of 5, the program must write 'Buzz' instead.
+
+If the number is a multiple of 3 and a multiple of 5, the program must write
+'Fizzbuzz' instead.
+
+Exemple:
+
+$>./fizzbuzz
+1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
+[...]
+97
+98
+fizz
+buzz
+$> 

@@ -1,24 +1,26 @@
 #include <unistd.h>
 
-int		main(int ac, char **av)
+int		main(int argc, char **argv)
 {
-	int i;
+	int i = 0;
 
-	i = 0;
-	if (ac == 2)
+	// Check if it have only 2 arguments
+	if (argc == 2)
 	{
-		while (av[1][i] != '\0')
+		while (argv[1][i])
 		{
-			if (av[1][i] == 'a')
+			// If it find a 'a', it prints it and leaves the loop
+			if (argv[1][i] == 'a')
 			{
 				write(1, "a", 1);
 				break ;
 			}
 			i++;
 		}
+		// If it not find a 'a', it prints only a new line
 		write(1, "\n", 1);
 	}
+	// If it doesn't have 2 arguments, print a 'a' with a new line
 	else
 	   write(1, "a\n", 2);
-	return (0);
 }

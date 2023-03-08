@@ -7,7 +7,7 @@ int		main(int ac, char **av)
 
 	i = 0;
 
-	// only calls the function if you have only 2 arguments
+	// Check if it have only 2 arguments
 	if (ac == 2)
 	{
 		// Go to the next character is space or tab

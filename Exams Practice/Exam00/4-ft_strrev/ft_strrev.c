@@ -1,4 +1,4 @@
-#include <stdio.h>
+// #include <stdio.h>
 
 // deliver only this function 
 char	*ft_strrev(char *str)

@@ -5,7 +5,7 @@ The purpose of this repository is to consolidate my knowledge about everything t
 ## Safety Instructions
 
 ### 1. Swim trought the projects 
-Don't worry about doing everything perfect and don't stay stuck in the same project for a long time.Try to advance the projects at a constant pace. If an exercise appears that seems super complicated, don't hesitate to skip it. If you move forward with resposnsibility, you will practice more and the concepts will be better consolidated. And in the end, you might be able to go back and solve the exercises that you have skipped.
+Don't worry about doing everything perfect and don't stay stuck in the same project for a long time.Try to advance the projects at a constant pace. If an exercise appears that seems super complicated, don't hesitate to skip it. If you move forward with responsability, you will practice more and the concepts will be better consolidated. And in the end, you might be able to go back and solve the exercises that you have skipped.
 
 ### 2. No cheating - Choose learning instead
 Here is the million dollar question: How am I going to do something that I have no idea how to do it? The answer is: use references.

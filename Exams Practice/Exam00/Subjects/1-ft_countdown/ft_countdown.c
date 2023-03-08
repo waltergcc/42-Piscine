@@ -1,15 +1,8 @@
 #include <unistd.h>
 
+// deliver the program with the main
 int		main(void)
 {
-	char digit;
-
-	digit = '9';
-	while (digit >= '0')
-	{
-		write(1, &digit, 1);
-		digit--;
-	}
-	write(1, "\n", 1);
-	return (0);
+	// Show '9876543210' with a new line on the standard output
+	write(1, "9876543210\n", 11);
 }

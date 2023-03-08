@@ -1,28 +1,37 @@
-int		ft_strlen(char *str)
-{
-	int i;
+#include <stdio.h>
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
+// deliver only this function 
 char	*ft_strrev(char *str)
 {
-	int i;
-	int len;
-	char tmp;
+	int i = 0;
+	int last;
+	char temp;
 
-	i = 0;
-	len = ft_strlen(str) - 1;
-	while (len > i)
-	{
-		tmp = str[i];
-		str[i] = str[len];
-		str[len] = tmp;
+	// Count the string length
+	while (str[i])
 		i++;
-		len--;
+
+	// 'last' receives the String Lenght - 1
+	last = i - 1;
+	i = 0;
+	while (last > i)
+	{
+		// Change the first index with the last
+		temp = str[i];
+		str[i] = str[last];
+		str[last] = temp;
+
+		// Go to the next indices
+		i++;
+		last--;
 	}
 	return (str);
 }
+/* 
+int	main(void)
+{
+	char	str[17] = "words and letters";
+
+	printf("Regular String: %s\n", str);
+	printf("Reversed String: %s\n", ft_strrev(str));
+} */

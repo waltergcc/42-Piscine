@@ -2,22 +2,19 @@
 
 In this project we will review some functions already done and learn about the conversion of bases and conversion of strings to integers. All exercises are commented for a better understanding.
 
----
 
-### Useful links:
+## Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>
-<br>
-Atoi: https://www.youtube.com/watch?v=QyDE7cPycnU&t=15s
 
-Bases conversion: https://www.youtube.com/watch?v=FFDMzbrEXaE&t=463s
+* **Atoi:** https://www.youtube.com/watch?v=QyDE7cPycnU&t=15s
+
+* **Bases conversion:** https://www.youtube.com/watch?v=FFDMzbrEXaE&t=463s
 <br>
-<br>
+
 **NOTE:** These videos don't have the resolution of the exercises.
 
----
-
-### My performance: 80% :heavy_check_mark:
+## Final grade: 80% :heavy_check_mark:
 All exercises have passed correct through Moulinette until exercise 4. Exercise 5 was made after the Pisicne end.
 
 | Project | Validation |

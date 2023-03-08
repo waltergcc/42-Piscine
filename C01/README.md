@@ -2,24 +2,21 @@
 
 In this project we will learn how to work with pointers and arrays. All exercises are commented for a better understanding.
 
----
 
-### Useful links:
+## Useful links:
 In this links bellow you can find videos that can help you to better understand some concepts covered in this project.
 <br>
-<br>
-Pointers: https://www.youtube.com/watch?v=2ybLD6_2gKM
 
-Arrays: https://www.youtube.com/watch?v=55l-aZ7_F24&list=PLBlnK6fEyqRjoG6aJ4FvFU1tlXbjLBiOP
+* **Pointers:** https://www.youtube.com/watch?v=2ybLD6_2gKM
 
-Sort array: https://www.youtube.com/watch?v=qLVrwCvVPGo
+* **Arrays:** https://www.youtube.com/watch?v=55l-aZ7_F24&list=PLBlnK6fEyqRjoG6aJ4FvFU1tlXbjLBiOP
+
+* **Sort array:** https://www.youtube.com/watch?v=qLVrwCvVPGo
 <br>
-<br>
+
 **NOTE:** These videos don't have the resolution of the exercises.
 
----
-
-### My performance: 100% :heavy_check_mark:
+## Final grade: 100% :heavy_check_mark:
 All exercises have passed correct through Moulinette.
 
 | Project | Validation |

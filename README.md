@@ -79,4 +79,4 @@ Enjoy swimming! :swimmer: :dart:
 | C10 | :x: | :heavy_check_mark: |
 | C11 | :x: | :heavy_check_mark: |
 | C12 | :x: | :heavy_check_mark: |
-| C13 | :x: | 5/8 |
+| C13 | :x: | :heavy_check_mark: |

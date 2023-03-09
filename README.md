@@ -55,12 +55,14 @@ Python Tutor link [here](https://pythontutor.com/visualize.html#mode=edit).
 
 ### 3. Practice, Practice, Practice... :clock7:
 Take some time during the week to practice the exam exercises. The more you practice the better you will become. Remember, the exam is a way to assess your learning.
-
-Enjoy swimming! :swimmer: :dart:
 <br>
 <br>
 
-> :house: If you want to deepen your studies at home and keep a similar environment to the one at school, I recommend using the Linux system on your personal computer. Here is a [link](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)  with further instructions that teaches you how to install Linux on a Windowns computer.
+> **NOTE:** If you want to deepen your studies at home and keep a similar environment to the one at school, I recommend using the Linux system on your personal computer. Here is a [link](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)  with further instructions that teaches you how to install Linux on a Windowns computer.
+<br>
+<br>
+
+### Enjoy swimming! :swimmer: :dart:
 <br>
 
 ## Projects Status

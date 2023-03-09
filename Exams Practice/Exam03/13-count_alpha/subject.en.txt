@@ -3,13 +3,13 @@ Expected files   : count_alpha.c
 Allowed functions: write, printf
 --------------------------------------------------------------------------------
 
-Écrire un programme count_alpha qui prend une chaîne et affiche le nombre d'occurences
-de ses caractères alphabétiques. Les autres caractères ne sont pas comptés. L'ordre est l'ordre d'apparition dans la chaîne.
-L'affichage doit être terminé par un newline.
+Write a Count_alpha program that takes a chain and displays the number of occurrences
+of its alphabetical characters.The other characters are not counted.Order is the order of appearance in the chain.
+The display must be finished with a Newline.
 
-Le format est dans les exemples.
+The format is in examples.
 
-Si le nombre d'arguments n'est pas 1, afficher juste un newline.
+If the number of arguments is not 1, just display a newline.
 
 Exemples :
 $> ./count_alpha abbcc

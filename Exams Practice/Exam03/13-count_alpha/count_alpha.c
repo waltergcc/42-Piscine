@@ -1,87 +1,69 @@
-bool	ft_is_uppercase(char c)
+#include <stdio.h>
+
+int is_alpha(char c)
 {
-	return (c >= 'A' && c <= 'Z');
+    // Returns 1 if the received Char is Alpha
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }
 
-int		ft_count_alpha_recursive_count(char *str, char target)
+int to_lower(char c)
 {
-	int		count;
-	char	current;
-
-	count = 0;
-	while ((current = *str))
-	{
-		if (ft_is_uppercase(current))
-			current += CASE_OFFSET;
-		if (target == current)
-			count++;
-		str++;
-	}
-	return (count);
+    // If the char is uppercase, it converts in lowercase
+    if (c >= 'A' && c <= 'Z')
+        return c + 32;
+    else
+        return c;
 }
 
-void	ft_count_alpha_print(int occurences[LETTER_COUNT + 1],
-				char order[LETTER_COUNT + 1])
+void ft_print(int *count)
 {
-	int	index;
-	int	size;
+    int first = 1;
+    int i = 0;
 
-	size = 0;
-	while (order[size] != '\0')
-		size++;
-	index = 0;
-	while (index < size)
-	{
-		printf("%d%c", occurences[order[index] - 'a'], order[index]);
-		if (index != size - 1)
-			printf(", ");
-		index++;
-	}
+    while (i < 26)
+    {
+        // only prints the values of 'count' that is greater than 0
+        if (count[i] > 0)
+        {
+            // sif 'first' is zero, it prints the comma
+            if (!first)
+                printf(", ");
+            // Print what is in Count followed by the character
+            printf("%d%c", count[i], 'a' + i);
+
+            // the first time 'First' receives 0
+            first = 0;
+        }
+        i++;
+    }
 }
 
-char	ft_count_alpha_validate(char c, int occurences[LETTER_COUNT + 1])
+void ft_count_alpha(char *str)
 {
-	if (!ft_is_uppercase(c) && !((c >= 'a' && c <= 'z')))
-		return ('\0');
-	if (ft_is_uppercase(c))
-		c += CASE_OFFSET;
-	if (occurences[(int)c - 'a'] != NOT_COUNTED_YET)
-		return ('\0');
-	return (c);
+    // All count values start with zero
+    int count[26] = {0};
+    int i = 0;
+
+    while (str[i])
+    {
+        // If the char is alpha, The counter for this letter is increased
+        if (is_alpha(str[i]))
+        {
+            // to_low function converts everything into lowercase
+            // 'Count' in the position of the letter is increased
+            count[to_lower(str[i]) - 'a']++;
+        }
+        i++;
+    }
+    ft_print(count);
 }
 
-void	ft_count_alpha(char *str)
+int main(int argc, char **argv)
 {
-	int		index;
-	int		occurences[LETTER_COUNT + 1];
-	char		occurences_order[LETTER_COUNT + 1];
-	char	current;
+	// only calls the function if you have only 2 arguments
+    if (argc == 2)
+        ft_count_alpha(argv[1]);
 
-	index = 0;
-	while (index < LETTER_COUNT + 1)
-	{
-		occurences[index] = NOT_COUNTED_YET;
-		occurences_order[index] = '\0';
-		index++;
-	}
-	index = 0;
-	while (*str)
-	{
-		current = ft_count_alpha_validate(*str, occurences);
-		if (current != '\0')
-		{
-			occurences[(int)current - 'a'] = ft_count_alpha_recursive_count(str, current);
-			occurences_order[index] = current;
-			index++;
-		}
-		str++;
-	}
-	ft_count_alpha_print(occurences, occurences_order);
-}
-
-int		main(int argc, char **argv)
-{
-	if (argc == 2)
-		ft_count_alpha(argv[1]);
-	printf("\n");
+	// Print the new line at the end
+    printf("\n");
 }

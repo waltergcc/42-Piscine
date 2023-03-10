@@ -18,6 +18,9 @@ It's necessary to compile the files main.c, ft_putchar.c and rush0X.c together t
 ```bash
 cc -Wall -Wextra -Werror main.c ft_putchar.c rush0X.c -o rush #'x' must be replaced by the rush number
 ```
-
+Then run the executable:
+```bash
+./rush
+```
 ## Final grade: Not started :x:
 I didn't subscribe to this project during the Piscine period. All exercises were done after the Piscine end to consolidate knowledge. These exercises didn't have the validation of Moulinette.

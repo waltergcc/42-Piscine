@@ -81,3 +81,4 @@ Enjoy swimming! :swimmer: :dart:
 | C12 | :x: | :heavy_check_mark: |
 | C13 | :x: | :heavy_check_mark: |
 | Rush00 | :x: | :heavy_check_mark: |
+| Rush01 | :x: | :heavy_check_mark: |

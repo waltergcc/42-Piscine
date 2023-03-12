@@ -1,6 +1,6 @@
 # Rush 00
 
-This is a project that is done in groups. In this project we will create a table where in the 'Main' file will have the number of lines and columns that should be printed.
+In this project we will create a table where in the 'Main' file will have the number of lines and columns that should be printed. All files are commented for a better understanding.
 
 ## Instructions
 

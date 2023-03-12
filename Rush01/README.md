@@ -1,6 +1,6 @@
 # Rush 01
 
-This is a project that is done in groups. In this project we will create a program that receives the clues for Skyscrappers's Puzzle and prints the solution.
+In this project we will create a program that receives the clues for Skyscrappers's Puzzle and prints the solution. All files are commented for a better understanding.
 
 ## Instructions
 

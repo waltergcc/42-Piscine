@@ -83,3 +83,4 @@ Enjoy swimming! :swimmer: :dart:
 | Rush00 | :x: | :heavy_check_mark: |
 | Rush01 | :x: | :heavy_check_mark: |
 | Rush02 | :x: | :heavy_check_mark: |
+| BSQ | :x: | :heavy_check_mark: |

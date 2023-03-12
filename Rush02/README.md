@@ -1,6 +1,6 @@
 # Rush 02
 
-This is a project that is done in groups. In this project we will create a program that receives a number and return the number name by writing.
+In this project we will create a program that receives a number and return the number name by writing. All files are commented for a better understanding.
 
 ## Instructions
 

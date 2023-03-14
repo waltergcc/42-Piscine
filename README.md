@@ -25,18 +25,18 @@ My_advice_to_learn()
             {
                 write the code
             }
-            else if you can't make it by yoursef
+            else if you can not make it by yoursef
             {
                 transcribe the code
                 this helps at the time of learning
 
-                if it doesn't make any sense
+                if it does not make any sense
                 {
                     copy the code
                     run
                     and see what it does
                 }
-                else if it still doesn't make sense
+                else if it still does not make sense
                 {
                     use the Python Tutor to see step by step what the code does
                     or use the VS Code debug tool
@@ -58,7 +58,7 @@ Take some time during the week to practice the exam exercises. The more you prac
 
 Enjoy swimming! :swimmer: :dart:
 
-> **NOTE:** If you want to deepen your studies at home and keep a similar environment to the one at school, I recommend using the Linux system on your personal computer. Here is a [link](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)  with further instructions that teaches you how to install Linux on a Windowns computer.
+> **NOTE:** If you want to deepen your studies at home and keep a similar environment to the one at school, I recommend using the Linux system on your personal computer. Here is a [link](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)  with further instructions that teaches you how to install Linux on a Windows computer.
 
 # Projects Status
 
